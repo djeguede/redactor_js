@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+ <html lang="ru-RU">
+ <head>
+	<title>Redactor of  table</title>
+	<script src='tableRedactor.js'></script>
+	<link rel='stylesheet' type='text/css' href='tableRedactor.css'>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ </head>
+ <body>
+	<div id='button-group'>
+	<input type='button' value='add' name='add' onclick='add();'>
+	<input type="button" value='delete' name='delete' onclick='delet();'>
+	<input type="file"  id= 'file' name='loadFile' onchange='loadFile();' accept='.json'>
+	</div>
+	
+	<div style="background-color:#f2f2f2" height="5 px">
+		<marquee><h3>This application is supported by last versions of Mozilla firefox, googleChrome and Microsfoft Edge</h3> </marquee>
+	</div>
+	
+	<div id='center'>
+       <table id = 'table'>
+	      <tr> <th>NAME </th>  <th> VALUE </th> </tr> 
+	   </table>
+	   
+	   <div id='left'>
+	     <ul>
+			<li> click "add" to add a new row in table </li>
+			<li> click "delete" to delete the last row in table </li>
+			<li> click "обзор" to load data from json-file to table </li>
+			<li> click "upload" to load data from textarea to table </li>
+			<li> click "download" to download data from the table to textarea </li>
+		    <li> to change the value of any cell double click on his </li>
+		 </ul>
+	     <textarea id='textarea'></textarea>
+		 <div id='button-group2'>
+		   	<input type="button" value='upload' name='upload' onclick='upload();'>
+			<input type='button' value='download' name='download' onclick='download();'>
+		 </div>
+	   </div>
+    </div>
+ </body>
+ </html>
